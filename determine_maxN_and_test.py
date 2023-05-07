@@ -1,3 +1,4 @@
+import sys
 #以純粹遞迴方式求F(n)的演算法
 def F(n):
     if n <= 1:
@@ -15,6 +16,8 @@ def Fib_dynamic(n, memo={}):
     memo[n] = result
     return result
 
+#確保錯誤原因不是因為遞迴深度達到限制
+sys.setrecursionlimit(99999999)
 #初始化參數
 n = 1
 low = 0
